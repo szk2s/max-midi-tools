@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 910.0, 78.0, 976.0, 809.0 ],
+		"rect" : [ 34.0, 78.0, 1190.0, 938.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 70.0, 440.0, 141.0, 22.0 ],
+					"text" : "dict.unpack inlet0: inlet1:"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-37",
 					"maxclass" : "newobj",
@@ -626,102 +638,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 361.0, 590.0, 217.0, 22.0 ],
-					"text" : "dict.pack outlet0: outlet1: @triggers 0 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 361.0, 626.0, 95.0, 22.0 ],
-					"text" : "prepend classify"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.96078431372549, 0.588235294117647, 0.152941176470588, 1.0 ],
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 361.0, 529.0, 186.999999999999943, 22.0 ],
-					"text" : "classify"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.666666666666657, 625.0, 79.0, 22.0 ],
-					"text" : "prepend sum"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 198.666666666666657, 441.0, 140.0, 22.0 ],
-					"text" : "dict.unpack inlet0: inlet1:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.96078431372549, 0.588235294117647, 0.152941176470588, 1.0 ],
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.666666666666657, 529.0, 61.0, 22.0 ],
-					"text" : "sum"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.996078431372549, 0.607843137254902, 0.0, 0.87 ],
-					"fontface" : 1,
-					"id" : "obj-5",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 483.0, 288.0, 33.0 ],
-					"text" : "These orange boxes are what you are developing. Click and try changing inside.",
-					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 70.0, 394.0, 310.0, 22.0 ],
-					"text" : "dict.unpack add1: sum: classify:"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 70.0, 394.0, 170.0, 22.0 ],
+					"text" : "dict.unpack channel_allocator:"
 				}
 
 			}
@@ -730,11 +653,11 @@
 					"color" : [ 0.96078431372549, 0.588235294117647, 0.152941176470588, 1.0 ],
 					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 529.0, 35.0, 22.0 ],
-					"text" : "add1"
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 70.0, 529.0, 141.0, 22.0 ],
+					"text" : "channel_allocator 4"
 				}
 
 			}
@@ -745,8 +668,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 626.0, 83.0, 22.0 ],
-					"text" : "prepend add1"
+					"patching_rect" : [ 70.0, 626.0, 150.0, 22.0 ],
+					"text" : "prepend channel_allocator"
 				}
 
 			}
@@ -831,66 +754,22 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 1 ],
-					"source" : [ "obj-11", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-12", 1 ]
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-12", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 208.166666666666657, 708.0, 56.0, 708.0, 56.0, 277.0, 79.5, 277.0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 370.5, 710.0, 56.166666666666657, 710.0, 56.166666666666657, 277.0, 79.5, 277.0 ],
-					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -958,22 +837,36 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-9", 1 ]
-				}
-
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "channel_allocator.maxpat",
+				"bootpath" : "~/repos/max-midi-tools/lib/channel_allocator",
+				"patcherrelativepath" : "../lib/channel_allocator",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-9", 0 ]
-				}
-
+				"name" : "tdd.maxpat",
+				"bootpath" : "~/repos/max-midi-tools/node_modules/tdd-max",
+				"patcherrelativepath" : "../node_modules/tdd-max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tdd.main.js",
+				"bootpath" : "~/repos/max-midi-tools/node_modules/tdd-max",
+				"patcherrelativepath" : "../node_modules/tdd-max",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tdd.console.js",
+				"bootpath" : "~/repos/max-midi-tools/node_modules/tdd-max",
+				"patcherrelativepath" : "../node_modules/tdd-max",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
  ],
-		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
